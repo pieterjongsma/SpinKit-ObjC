@@ -23,35 +23,32 @@
 
     CGFloat squareSize = size.width / 4;
 
-    for (NSInteger position = 0; position < 7; position++) {
+    NSInteger numPositions = 7;
+    for (NSInteger position = 0; position < numPositions; position++) {
         NSInteger x = [self xForPosition:position];
         NSInteger y = [self yForPosition:position];
 
         CALayer *square = [CALayer layer];
         square.frame = CGRectMake(x * squareSize, y * squareSize, squareSize, squareSize);
         square.backgroundColor = color.CGColor;
-        square.transform = CATransform3DMakeScale(0.0, 0.0, 0.0);
 
-        CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+        CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
         anim.removedOnCompletion = NO;
         anim.repeatCount = HUGE_VALF;
         anim.duration = 1.5;
-        CGFloat begin = position * 0.1;
-        anim.keyTimes = @[@(0.0), @(begin), @(begin + 0.2), @(1.0)];
+        CGFloat begin = position * 0.05;
+        CGFloat duration = 0.5 / numPositions;
+        anim.keyTimes = @[@(0.0), @(begin), @(begin + duration), @(0.95), @(1.0)];
 
         anim.timingFunctions = @[
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]
                                  ];
 
-        anim.values = @[
-                        [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.0, 0.0, 0.0)],
-                        [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.0, 0.0, 0.0)],
-                        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 0.0)],
-                        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 0.0)]
-                        ];
+        anim.values = @[@0, @0, @1, @1, @0];
 
         [layer addSublayer:square];
         [square addAnimation:anim forKey:@"spinkit-anim"];
