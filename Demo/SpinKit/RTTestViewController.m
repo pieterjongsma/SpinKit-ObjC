@@ -26,6 +26,10 @@
     scrollView.backgroundColor = [UIColor darkGrayColor];
     self.view = scrollView;
 
+    [self insertSpinnerOfStyle: RTSpinKitViewStylePJLogo
+               backgroundColor:[UIColor colorWithWhite:0.2 alpha:1.0]
+                         label:@"PJ Logo"];
+
     [self insertSpinnerOfStyle: RTSpinKitViewStylePlane
                backgroundColor:[UIColor colorWithRed:0.827 green:0.329 blue:0 alpha:1.0]
                          label:@"Plane"];

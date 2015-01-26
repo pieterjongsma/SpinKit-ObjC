@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		028F586B19C75CBE0070546A /* RTSpinKitArcAltAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F586A19C75CBD0070546A /* RTSpinKitArcAltAnimation.m */; };
 		02EE552619C22DA600D58D49 /* RTSpinKitArcAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EE552519C22DA600D58D49 /* RTSpinKitArcAnimation.m */; };
+		449314E41A76C20000489DED /* RTSpinKitPJLogoAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 449314E31A76C20000489DED /* RTSpinKitPJLogoAnimation.m */; };
 		F646194B1874E9FB00ED6B1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F646194A1874E9FB00ED6B1B /* Foundation.framework */; };
 		F646194D1874E9FB00ED6B1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F646194C1874E9FB00ED6B1B /* CoreGraphics.framework */; };
 		F646194F1874E9FB00ED6B1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F646194E1874E9FB00ED6B1B /* UIKit.framework */; };
@@ -54,6 +55,8 @@
 		028F586A19C75CBD0070546A /* RTSpinKitArcAltAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitArcAltAnimation.m; sourceTree = "<group>"; usesTabs = 0; };
 		02EE552419C22DA600D58D49 /* RTSpinKitArcAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitArcAnimation.h; sourceTree = "<group>"; };
 		02EE552519C22DA600D58D49 /* RTSpinKitArcAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitArcAnimation.m; sourceTree = "<group>"; };
+		449314E21A76C20000489DED /* RTSpinKitPJLogoAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitPJLogoAnimation.h; sourceTree = "<group>"; };
+		449314E31A76C20000489DED /* RTSpinKitPJLogoAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSpinKitPJLogoAnimation.m; sourceTree = "<group>"; };
 		F64619471874E9FB00ED6B1B /* SpinKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F646194A1874E9FB00ED6B1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F646194C1874E9FB00ED6B1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -248,6 +251,8 @@
 				02EE552519C22DA600D58D49 /* RTSpinKitArcAnimation.m */,
 				028F586919C75CBD0070546A /* RTSpinKitArcAltAnimation.h */,
 				028F586A19C75CBD0070546A /* RTSpinKitArcAltAnimation.m */,
+				449314E21A76C20000489DED /* RTSpinKitPJLogoAnimation.h */,
+				449314E31A76C20000489DED /* RTSpinKitPJLogoAnimation.m */,
 			);
 			name = Animations;
 			path = ../../SpinKit/Animations;
@@ -360,6 +365,7 @@
 				F6BC23C619B972340055D239 /* RTSpinKitCircleFlipAnimation.m in Sources */,
 				F6BC23C419B972340055D239 /* RTSpinKitChasingDotsAnimation.m in Sources */,
 				F646197E1874EC8D00ED6B1B /* RTTestViewController.m in Sources */,
+				449314E41A76C20000489DED /* RTSpinKitPJLogoAnimation.m in Sources */,
 				F6BC23C319B972340055D239 /* RTSpinKitBounceAnimation.m in Sources */,
 				F6BC23C719B972340055D239 /* RTSpinKitFadingCircleAltAnimation.m in Sources */,
 				F6BC23CE19B972340055D239 /* RTSpinKitWordPressAnimation.m in Sources */,

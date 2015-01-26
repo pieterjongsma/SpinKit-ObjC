@@ -40,7 +40,8 @@ typedef NS_ENUM(NSInteger, RTSpinKitViewStyle) {
     RTSpinKitViewStyleFadingCircle,
     RTSpinKitViewStyleFadingCircleAlt,
     RTSpinKitViewStyleArc,
-    RTSpinKitViewStyleArcAlt
+    RTSpinKitViewStyleArcAlt,
+    RTSpinKitViewStylePJLogo
 };
 
 @protocol RTSpinKitAnimating;
