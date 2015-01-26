@@ -19,7 +19,7 @@
     // - - - 3
     // - 6 5 4
 
-    NSTimeInterval beginTime = CACurrentMediaTime();
+//    NSTimeInterval beginTime = CACurrentMediaTime();
 
     CGFloat squareSize = size.width / 4;
 
@@ -36,8 +36,8 @@
         anim.removedOnCompletion = NO;
         anim.repeatCount = HUGE_VALF;
         anim.duration = 1.5;
-        anim.beginTime = beginTime + (0.1 * position);
-        anim.keyTimes = @[@(0.0), @(0.4), @(0.6), @(1.0)];
+        CGFloat begin = position * 0.1;
+        anim.keyTimes = @[@(0.0), @(begin), @(begin + 0.2), @(1.0)];
 
         anim.timingFunctions = @[
                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
@@ -48,9 +48,9 @@
 
         anim.values = @[
                         [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.0, 0.0, 0.0)],
+                        [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.0, 0.0, 0.0)],
                         [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 0.0)],
-                        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 0.0)],
-                        [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.0, 0.0, 0.0)]
+                        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 0.0)]
                         ];
 
         [layer addSublayer:square];
