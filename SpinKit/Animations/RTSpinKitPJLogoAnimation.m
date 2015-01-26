@@ -17,13 +17,13 @@
     // - - - 1
     // - 0 - 2
     // - - - 3
-    // 7 6 5 4
+    // - 6 5 4
 
     NSTimeInterval beginTime = CACurrentMediaTime();
 
     CGFloat squareSize = size.width / 4;
 
-    for (NSInteger position = 0; position < 8; position++) {
+    for (NSInteger position = 0; position < 7; position++) {
         NSInteger x = [self xForPosition:position];
         NSInteger y = [self yForPosition:position];
 
@@ -61,9 +61,6 @@
 - (NSInteger)xForPosition:(NSInteger)position
 {
     switch (position) {
-        case 7:
-            return 0;
-            break;
         case 0:
         case 6:
             return 1;
@@ -94,7 +91,6 @@
         case 3:
             return 2;
             break;
-        case 7:
         case 6:
         case 5:
         case 4:
